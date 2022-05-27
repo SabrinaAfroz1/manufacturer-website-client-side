@@ -12,8 +12,13 @@ import AddReview from './Pages/Dashboard/AddReview';
 import Myorders from './Pages/Dashboard/Myorders';
 import ManageOrder from './Pages/Dashboard/ManageOrder';
 import ManageProduct from './Pages/Dashboard/ManageProduct';
-import AddProducts from './Pages/Dashboard/AddProducts';
 import AllUser from './Pages/Dashboard/AllUser';
+
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Notfound from './Pages/Shared/NotFound';
+import Purchase from './Pages/Purchase/Purchase';
+import AddTool from './Pages/Dashboard/AddTool';
 
 function App() {
   return (
@@ -23,7 +28,7 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
-        <Route path='/purchase' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}></Route>
+        <Route path='/purchase/:toolId' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
 
         <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
 
@@ -34,18 +39,17 @@ function App() {
 
           <Route path='manageorder' element={<ManageOrder></ManageOrder>}></Route>
           <Route path='manageproduct' element={<ManageProduct></ManageProduct>}></Route>
-          <Route path='addproduct' element={<AddProducts></AddProducts>}></Route>
+          <Route path='addtool' element={<AddTool></AddTool>}></Route>
           <Route path='alluser' element={<AllUser></AllUser>}></Route>
-
-
-
-
-
-
-
         </Route>
 
+
+
+
+        <Route path='*' element={<Notfound></Notfound>}></Route>
+
       </Routes>
+      <ToastContainer />
 
     </div>
   );
