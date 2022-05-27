@@ -1,16 +1,22 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Tool = (props) => {
-    const { tool } = props;
+    const { _id, name, description, image, price, quantity } = props.tool;
+    const navigate = useNavigate();
+    const navigateToPurchase = _id => {
+        navigate(`/purchase/${_id}`);
+    }
     return (
         <div className=" ">
             <div className="card h-96 lg:max-w-lg bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
-                    <img src={tool.image} alt=" " className="rounded-xl w-1/2" />
+                    <img src={image} alt=" " className="rounded-xl w-1/2" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{tool.name}</h2>
-                    <p>{tool.description}</p>
+                    <h2 className="card-title">{name}</h2>
+                    <p>Price :{price}</p>
+                    <button onClick={() => navigateToPurchase(_id)} className='rounded-full'>Purchase</button>
 
                 </div>
             </div>
