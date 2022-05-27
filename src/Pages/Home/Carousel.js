@@ -8,6 +8,29 @@ import slider3 from '../../images/slider3.jpg';
 const Carousel = () => {
     return (
         <div>
+
+            <div className='grid lg:grid-cols-3 gap-10 sm:grid-cols-1 md:grid-cols-2 mb-5'>
+                <div className="card lg:max-w-lg bg-base-100 ">
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title text-4xl font-extrabold text-primary">  2000+</h2>
+                        <p className='text-2xl text-secondary font-medium'>Customer</p>
+                    </div>
+                </div>
+                <div className="card lg:max-w-lg bg-base-100 ">
+                    <div className="card-body  items-center text-center">
+                        <h2 className="card-title font-extrabold text-4xl text-primary">300+</h2>
+                        <p className='text-2xl text-secondary font-medium'>Reviews</p>
+                    </div>
+                </div>
+                <div className="card lg:max-w-lg bg-base-100 ">
+                    <div className="card-body items-center text-center">
+                        <h2 className="card-title font-extrabold text-4xl text-primary">500+</h2>
+                        <p className='text-2xl text-secondary font-medium'>Tools</p>
+                    </div>
+                </div>
+
+            </div>
+
             <div class="carousel w-full">
                 <div id="slide1" class="carousel-item relative w-full">
                     <img alt='' src={slider1} class="w-full" />

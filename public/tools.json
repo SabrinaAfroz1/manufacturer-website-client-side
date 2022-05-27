@@ -1,0 +1,50 @@
+[
+    {
+        "_id": 1,
+        "name": "RUNNER BRICK",
+        "image": "https://ibb.co/MVHGJHd",
+        "description": "RBL PICKET BRICKS 9.25″ X 4.2.5″ X 2.5″",
+        "price": 200,
+        "available": 3000
+    },
+    {
+        "_id": 2,
+        "name": "AKIJ PORTLAND CEMENT 50kg",
+        "image": "https://ibb.co/R9Rf3rg",
+        "description": "From the beginning we produce type-CEM-I cement in Bangladesh. Considering our weather, salinity and its ultimate durability requirements of a structure, we have matched the perfect blend of cement introducing AKIJ PORTLAND CEMENT (PC).",
+        "price": 600,
+        "available": 2000
+    },
+    {
+        "_id": 3,
+        "name": "GAZI 0.50HP SELF-PRIMING JET PUMP",
+        "image": "https://ibb.co/tZGLXwY",
+        "description": "Peripheral positive displacement pumps with frontal pumps for small household systems and simple industrial applications; characterised by a considerable ratio between performance and required output.",
+        "price": 2500,
+        "available": 500
+    },
+    {
+        "_id": 4,
+        "name": "10 A 2-PIN SWITCHED SOCKET WITH NEON LOTUS SERIES WHITE ",
+        "image": "https://ibb.co/3sJrXvQ",
+        "description": "International Standards .All screws are made of copper, Made of Poly-carbonate Virgin Resin, Voltage: 250V AC ,Current: 10A ",
+        "price": 500,
+        "available": 1000
+    },
+    {
+        "_id": 5,
+        "name": "  WALL TILES ",
+        "image": "https://ibb.co/Zc3FQ5x",
+        "description": "241 X 70 X 12 MM MOON WHITE VITRIFIED CLADDING WALL TILES – MATT FINISH ",
+        "price": 50,
+        "available": 1000
+    },
+    {
+        "_id": 6,
+        "name": "RFL 200 ML UPVC SOLVENT CEMENT ",
+        "image": "https://ibb.co/hXQMVhJ",
+        "description": " Solvent cement is used to join two or more pipes or join a pipe to a fitting or a fitting to a fitting. Its quality plays a major role in the strength of the joint formed",
+        "price": 2500,
+        "available": 200
+    }
+]
