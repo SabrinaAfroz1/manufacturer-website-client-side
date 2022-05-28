@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form";
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 
 const AddTool = () => {
     const [user] = useAuthState(auth);
@@ -25,7 +26,7 @@ const AddTool = () => {
         })
             .then(res => res.json())
             .then(result => {
-                alert("added");
+                toast("added");
             })
 
     }

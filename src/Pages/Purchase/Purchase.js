@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
+import { toast } from 'react-toastify';
 import useToolDetails from '../../Hooks/useToolDetails';
 
 const Purchase = () => {
@@ -40,7 +41,7 @@ const Purchase = () => {
             })
                 .then(res => res.json())
                 .then(result => {
-                    alert("added");
+                    toast('Add to Cart');
 
                 })
 
@@ -57,13 +58,13 @@ const Purchase = () => {
                 .then(response => response.json())
                 .then(data => {
                     console.log(data);
-                    alert("added2");
+
 
                 })
         }
 
         else {
-            alert("quantity problem");
+            toast("quantity problem");
         }
 
     }

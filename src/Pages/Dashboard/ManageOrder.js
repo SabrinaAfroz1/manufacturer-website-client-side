@@ -5,6 +5,24 @@ import UseOrder from '../../Hooks/UseOrder';
 const ManageOrder = () => {
     const [orders, setOrders] = UseOrder();
 
+
+    const deleteOrder = (id) => {
+        const proceed = window.confirm('Are you sure?');
+        if (proceed) {
+            const url = `http://localhost:5000/purchase/${orders._id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    const remaining = orders.filter(order => order._id !== id);
+                    setOrders(remaining);
+                })
+        }
+    }
+
+
     return (
         <div>
 
@@ -18,6 +36,7 @@ const ManageOrder = () => {
                             <th>Tool Name</th>
                             <th>Quantity</th>
                             <th>Total Price</th>
+                            <th> </th>
 
                         </tr>
                     </thead>
@@ -29,6 +48,8 @@ const ManageOrder = () => {
                                 <td>{order.name}</td>
                                 <td>{order.quantity}</td>
                                 <td>{order.price}</td>
+                                <td> <button onClick={() => deleteOrder(order._id)} className='btn btn-xs'>Delete</button>
+                                </td>
                             </tbody>
 
                         )
