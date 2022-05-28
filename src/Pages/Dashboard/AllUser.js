@@ -4,7 +4,8 @@ import Loading from '../../Pages/Shared/Loading'
 import UserRow from './UserRow';
 
 const AllUser = () => {
-    const { data: users, isLoading, refetch } = useQuery('user', () => fetch('http://localhost:5000/user', {
+
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
@@ -17,7 +18,6 @@ const AllUser = () => {
 
     return (
         <div>
-            <h2>Total Users : {users.length}</h2>
 
             <div class="overflow-x-auto">
                 <table class="table w-full">
@@ -27,7 +27,7 @@ const AllUser = () => {
                             <th> SL No</th>
                             <th>Email</th>
                             <th>Admin Role</th>
-                            <th>Remove</th>
+
                         </tr>
                     </thead>
                     <tbody>
