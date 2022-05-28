@@ -15,7 +15,6 @@ const Header = () => {
 
     const menuItm = <>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/review">Review</Link></li>
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/portfolio">My Portfolio</Link></li>
         {

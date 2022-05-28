@@ -10,17 +10,14 @@ const AllUser = () => {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
-
     }).then(res => res.json()))
     if (isLoading) {
         return <Loading></Loading>
     }
-
     return (
         <div>
-
-            <div class="overflow-x-auto">
-                <table class="table w-full">
+            <div className="overflow-x-auto">
+                <table className="table w-full">
 
                     <thead>
                         <tr>
@@ -38,7 +35,9 @@ const AllUser = () => {
                                     user={user}
                                     index={index}
                                     refetch={refetch}
-                                ></UserRow>)
+                                >
+
+                                </UserRow>)
                         }
                     </tbody>
                 </table>
