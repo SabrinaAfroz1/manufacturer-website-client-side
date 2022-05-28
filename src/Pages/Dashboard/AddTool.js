@@ -16,7 +16,7 @@ const AddTool = () => {
             image: data.image,
             description: data.description
         }
-        const url = 'http://localhost:5000/tools';
+        const url = 'https://calm-ridge-04381.herokuapp.com/tools';
         fetch(url, {
             method: 'POST',
             headers: {

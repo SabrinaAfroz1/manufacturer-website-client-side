@@ -31,7 +31,7 @@ const Purchase = () => {
                 quantity: event.target.addquantity.value,
             }
             event.preventDefault();
-            const url = `http://localhost:5000/purchase`;
+            const url = `https://calm-ridge-04381.herokuapp.com/purchase`;
             fetch(url, {
                 method: 'POST',
                 headers: {
@@ -47,7 +47,7 @@ const Purchase = () => {
 
 
             const restQuantity = availableQuantity - newQuantity;
-            const url1 = `http://localhost:5000/tools/${toolId}`
+            const url1 = `https://calm-ridge-04381.herokuapp.com/tools/${toolId}`
             fetch(url1, {
                 method: 'PUT',
                 headers: {

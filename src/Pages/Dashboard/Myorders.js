@@ -10,11 +10,9 @@ const Myorders = () => {
     const navigate = useNavigate(auth);
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/purchase/${user.email}`, {
+            fetch(`https://calm-ridge-04381.herokuapp.com/purchase/${user.email}`, {
                 method: 'GET',
-                headers: {
-                    'authorization': `Beared ${localStorage.getItem('accessToken')}`
-                }
+
             })
                 .then(res => {
                     console.log('res', res);
@@ -31,7 +29,7 @@ const Myorders = () => {
 
     return (
         <div>
-            <h2 className='text-accent text-1xl mb-5 font-bold'>Total Number of Appointment : {orders.length}</h2>
+            <h2 className='text-accent text-1xl mb-5 font-bold'>Total Number of Tools : {orders.length}</h2>
 
             <div className="overflow-x-auto">
                 <table className="table w-full">

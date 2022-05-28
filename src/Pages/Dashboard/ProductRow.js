@@ -10,7 +10,7 @@ const ProductRow = ({ tool, index }) => {
     const deleteTool = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/tools/${_id}`;
+            const url = `https://calm-ridge-04381.herokuapp.com/tools/${_id}`;
             fetch(url, {
                 method: 'DELETE'
             })

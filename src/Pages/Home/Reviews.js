@@ -4,7 +4,7 @@ import Review from './Review';
 const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        const url = 'http://localhost:5000/review';
+        const url = 'https://calm-ridge-04381.herokuapp.com/review';
         fetch(url)
             .then(res => res.json())
             .then(data => setReviews(data));

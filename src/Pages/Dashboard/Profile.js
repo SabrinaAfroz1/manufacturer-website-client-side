@@ -8,7 +8,7 @@ const Profile = () => {
 
     const [user1, setUser] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/user/${user.email}`, {
+        fetch(`https://calm-ridge-04381.herokuapp.com/user/${user.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Beared ${localStorage.getItem('accessToken')}`
@@ -26,7 +26,7 @@ const Profile = () => {
             linkedin: event.target.linkedin.value,
             education: event.target.education.value,
         }
-        const url = `http://localhost:5000/user/${user.email}`;
+        const url = `https://calm-ridge-04381.herokuapp.com/user/${user.email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -46,8 +46,8 @@ const Profile = () => {
         <div>
             <div class="card w-96 bg-base-100 shadow-xl mx-auto">
                 <div class="card-body">
-                    <h2 class="card-title"> Name :{user1.displayName}</h2>
-                    <h2> Email : {user._id}</h2>
+                    <h2 class="card-title"> Name :{user.displayName}</h2>
+                    <h2> Email : {user.email}</h2>
                     <h2> Education : {user1.education}</h2>
                     <h2> Address : {user1.address}</h2>
                     <h2> Linkdin : {user1.linkdin}</h2>

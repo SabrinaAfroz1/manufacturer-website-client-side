@@ -14,7 +14,7 @@ const AddReview = () => {
             rating: data.rating,
             comment: data.comment
         }
-        const url = `http://localhost:5000/review`;
+        const url = `https://calm-ridge-04381.herokuapp.com/review`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -9,7 +9,7 @@ const ManageOrder = () => {
     const deleteOrder = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = `http://localhost:5000/purchase/${orders._id}`;
+            const url = `https://calm-ridge-04381.herokuapp.com/purchase/${orders._id}`;
             fetch(url, {
                 method: 'DELETE'
             })
