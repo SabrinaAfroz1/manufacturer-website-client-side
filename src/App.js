@@ -19,6 +19,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Notfound from './Pages/Shared/NotFound';
 import Purchase from './Pages/Purchase/Purchase';
 import AddTool from './Pages/Dashboard/AddTool';
+import Blogs from './Pages/Blogs/Blogs';
+import Portfolio from './Pages/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -28,6 +30,9 @@ function App() {
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+
         <Route path='/purchase/:toolId' element={<RequireAuth><Purchase></Purchase></RequireAuth>}></Route>
 
         <Route path='dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
